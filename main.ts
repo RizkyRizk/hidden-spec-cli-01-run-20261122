@@ -216,12 +216,15 @@ function occurrences(
   for (const t of tiers) {
     const key = t === 0 ? (s: string): string => s : t === 1 ? trail : both;
     const ok = o.map(key);
+    // Key each file line once per tier instead of re-keying the same lines
+    // at every candidate position.
+    const keyed = lines.map(key);
     const pos: number[] = [];
     for (let i = from; i + ok.length <= lines.length; i++) {
       if (eofOnly && i + ok.length !== lines.length) continue;
       let good = true;
       for (let j = 0; j < ok.length; j++) {
-        if (key(lines[i + j]!) !== ok[j]) {
+        if (keyed[i + j]! !== ok[j]) {
           good = false;
           break;
         }
