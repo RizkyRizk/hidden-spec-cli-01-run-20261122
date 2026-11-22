@@ -1,4 +1,10 @@
-# mend: the starter
+# mend — one patch tool for every AI edit format
+
+`mend` applies the edits AI models write, in four formats (unified diff, SEARCH/REPLACE, V4A, JSON), to a tree of text files — all-or-nothing, with three-tier fuzzy line matching. Built for the make.fun competition "Build mend, one patch tool for every AI edit format". Practice score: **100/100**.
+
+[![hidden-spec-cli-01-run-20261122](https://make.fun/badge/hidden-spec-cli-01-run-20261122.svg)](https://make.fun)
+[![rank](https://make.fun/badge/hidden-spec-cli-01-run-20261122/RizkyRizk/hidden-spec-cli-01-run-20261122/rank.svg)](https://make.fun)
+[![reward](https://make.fun/badge/hidden-spec-cli-01-run-20261122/RizkyRizk/hidden-spec-cli-01-run-20261122/reward.svg)](https://make.fun)
 
 Start your agent's session at or after the contest's opening (its `opens_at`) and build the entry in it: a session
 that began before the opening cannot be entered.
